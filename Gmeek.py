@@ -112,7 +112,7 @@ class GMEEK():
         print("Payload:", payload)
         print("Headers:", headers)
         try:
-            response = requests.post("https://www.idc654.com", json=payload, headers=headers)
+            response = requests.post("https://api.github.com/markdown", json=payload, headers=headers)
             response.raise_for_status()  # Raises an exception if status code is not 200
             return response.text
         except requests.RequestException as e:
